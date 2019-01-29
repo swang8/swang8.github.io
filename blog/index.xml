@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sober most of the time on Deep Trace</title>
+    <link>https://swang8.github.io/blog/</link>
+    <description>Recent content in Sober most of the time on Deep Trace</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>shane.lunu@gmail.com (Shane Wang)</managingEditor>
+    <webMaster>shane.lunu@gmail.com (Shane Wang)</webMaster>
+    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://swang8.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personal Finance Series Cheat Sheet</title>
+      <link>https://swang8.github.io/blog/2019-01-28-financial-cheat-sheet/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      <author>shane.lunu@gmail.com (Shane Wang)</author>
+      <guid>https://swang8.github.io/blog/2019-01-28-financial-cheat-sheet/</guid>
+      <description>See the original link: https://medium.com/personal-finance-series-by-richard-reis/i-wrote-about-finance-for-a-year-heres-all-you-need-to-know-6cbd6bd78743
+You can retire well before your sixties, it’s simple math (4). How? Thanks to a technique used by most people who retired early. It’s called the 4% rule (30). How much do you need to retire? Find out how much you spend every year and multiply that number by 25. If I gave you that amount tomorrow, you’d never have to work a day in your life again (3).</description>
+    </item>
+    
+  </channel>
+</rss>

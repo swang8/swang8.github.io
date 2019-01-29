@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://swang8.github.io/books/compstats/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/intro_ml/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/islr/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://swang8.github.io/about/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
@@ -23,12 +38,57 @@
   </url>
   
   <url>
+    <loc>https://swang8.github.io/books/compstats/2017-03-07-bigimg-sample/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/intro_ml/2017-03-07-bigimg-sample/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://swang8.github.io/books/2017-03-05-math-sample/</loc>
     <lastmod>2017-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://swang8.github.io/books/compstats/2017-03-05-math-sample/</loc>
+    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/intro_ml/2017-03-05-math-sample/</loc>
+    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/islr/2017-03-05-math-sample/</loc>
+    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://swang8.github.io/books/2016-03-08-code-sample/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/compstats/2016-03-08-code-sample/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/intro_ml/2016-03-08-code-sample/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/islr/2016-03-08-code-sample/</loc>
     <lastmod>2016-03-08T00:00:00+00:00</lastmod>
   </url>
   

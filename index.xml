@@ -5,18 +5,31 @@
     <link>https://swang8.github.io/</link>
     <description>Recent content on Deep Trace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>shane.lunu@gmail.com (Shichen Wang)</managingEditor>
-    <webMaster>shane.lunu@gmail.com (Shichen Wang)</webMaster>
-    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
+    <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
+    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Introduction</title>
+      <link>https://swang8.github.io/books/islr/intro/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/intro/</guid>
+      <description>An overview of statistial learning Statistical learning refers to a vast set of tools for understanding data.
+Two categories: supervised and unsupervised.
+Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
+Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
+Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ variable for the $ ith $ observation, where $ i=1,2,&amp;hellip;n $ and $ j=1,2,&amp;hellip;n $.</description>
+    </item>
+    
+    <item>
       <title>Creamy cajun chicken pasta</title>
       <link>https://swang8.github.io/receipes/creamy-cajun-chicken-pasta/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/receipes/creamy-cajun-chicken-pasta/</guid>
       <description>Ingredients:  8 oz penne pasta cooked according to package instructions 2 TBSPs extra virgin olive oil 2 boneless skinless chicken breasts pounded thin 1 1&amp;frasl;2 TBSPs Cajun seasoning divided 2 TBSPs unsalted butter 2 cloves garlic minced 1 TBSP all purpose flour 1 1&amp;frasl;2 cups half and half 1&amp;frasl;3 cup grated parmesan plus more for topping salt and pepper to taste 1 diced tomato fresh parsley chopped  Instructions  While the pasta is cooking, heat the extra virgin olive oil in a large skillet over medium heat.</description>
     </item>
@@ -25,7 +38,7 @@
       <title>Personal Finance Series Cheat Sheet</title>
       <link>https://swang8.github.io/blog/2019-01-28-financial-cheat-sheet/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/blog/2019-01-28-financial-cheat-sheet/</guid>
       <description>See the original link: https://medium.com/personal-finance-series-by-richard-reis/i-wrote-about-finance-for-a-year-heres-all-you-need-to-know-6cbd6bd78743
 You can retire well before your sixties, it’s simple math (4). How? Thanks to a technique used by most people who retired early. It’s called the 4% rule (30). How much do you need to retire? Find out how much you spend every year and multiply that number by 25. If I gave you that amount tomorrow, you’d never have to work a day in your life again (3).</description>
@@ -35,7 +48,7 @@ You can retire well before your sixties, it’s simple math (4). How? Thanks to 
       <title>Big Image Sample</title>
       <link>https://swang8.github.io/books/2017-03-07-bigimg-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/2017-03-07-bigimg-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
     </item>
@@ -44,7 +57,7 @@ You can retire well before your sixties, it’s simple math (4). How? Thanks to 
       <title>Big Image Sample</title>
       <link>https://swang8.github.io/books/compstats/2017-03-07-bigimg-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/compstats/2017-03-07-bigimg-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
     </item>
@@ -53,7 +66,7 @@ You can retire well before your sixties, it’s simple math (4). How? Thanks to 
       <title>Big Image Sample</title>
       <link>https://swang8.github.io/books/intro_ml/2017-03-07-bigimg-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/intro_ml/2017-03-07-bigimg-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
     </item>
@@ -62,7 +75,7 @@ You can retire well before your sixties, it’s simple math (4). How? Thanks to 
       <title>Big Image Sample</title>
       <link>https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
     </item>
@@ -71,7 +84,7 @@ You can retire well before your sixties, it’s simple math (4). How? Thanks to 
       <title>Math Sample</title>
       <link>https://swang8.github.io/books/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
@@ -86,7 +99,7 @@ $$&lt;/p&gt;
       <title>Math Sample</title>
       <link>https://swang8.github.io/books/compstats/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/compstats/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
@@ -101,7 +114,7 @@ $$&lt;/p&gt;
       <title>Math Sample</title>
       <link>https://swang8.github.io/books/intro_ml/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/intro_ml/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
@@ -116,7 +129,7 @@ $$&lt;/p&gt;
       <title>Math Sample</title>
       <link>https://swang8.github.io/books/islr/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
@@ -131,7 +144,7 @@ $$&lt;/p&gt;
       <title>Code Sample</title>
       <link>https://swang8.github.io/books/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
     </item>
@@ -140,7 +153,7 @@ $$&lt;/p&gt;
       <title>Code Sample</title>
       <link>https://swang8.github.io/books/compstats/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/compstats/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
     </item>
@@ -149,7 +162,7 @@ $$&lt;/p&gt;
       <title>Code Sample</title>
       <link>https://swang8.github.io/books/intro_ml/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/intro_ml/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
     </item>
@@ -158,9 +171,18 @@ $$&lt;/p&gt;
       <title>Code Sample</title>
       <link>https://swang8.github.io/books/islr/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Multiple sources of income</title>
+      <link>https://swang8.github.io/blog/freedom_build_101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/blog/freedom_build_101/</guid>
+      <description></description>
     </item>
     
   </channel>

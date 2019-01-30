@@ -5,18 +5,31 @@
     <link>https://swang8.github.io/books/islr/</link>
     <description>Recent content in Introduction to Statistial Learning with applications in R on Deep Trace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>shane.lunu@gmail.com (Shichen Wang)</managingEditor>
-    <webMaster>shane.lunu@gmail.com (Shichen Wang)</webMaster>
+    <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
+    <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
     <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/books/islr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Introduction</title>
+      <link>https://swang8.github.io/books/islr/intro/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/intro/</guid>
+      <description>An overview of statistial learning Statistical learning refers to a vast set of tools for understanding data.
+Two categories: supervised and unsupervised.
+Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
+Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
+Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ variable for the $ ith $ observation, where $ i=1,2,&amp;hellip;n $ and $ j=1,2,&amp;hellip;n $.</description>
+    </item>
+    
+    <item>
       <title>Big Image Sample</title>
       <link>https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
     </item>
@@ -25,7 +38,7 @@
       <title>Math Sample</title>
       <link>https://swang8.github.io/books/islr/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
@@ -40,7 +53,7 @@ $$&lt;/p&gt;
       <title>Code Sample</title>
       <link>https://swang8.github.io/books/islr/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>shane.lunu@gmail.com (Shichen Wang)</author>
+      <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
     </item>

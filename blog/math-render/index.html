@@ -70,7 +70,7 @@ Issues: Inline formula rendering is not working Solution: add the following line
 Issues: Inline formula rendering is not working Solution: add the following lines to the file themes/beautifulhugo/layouts/partials/head_custom.html.
 &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n&#43;Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9&#43;8CqC9Y&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-K3vbOmF2BtaVai&#43;Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi&#43;nyqe&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function() { renderMathInElement(document.body, { delimiters: [ {left: &amp;#34;$$&amp;#34;, right: &amp;#34;$$&amp;#34;, display: true}, {left: &amp;#34;\\[&amp;#34;, right: &amp;#34;\\]&amp;#34;, display: true}, {left: &amp;#34;$&amp;#34;, right: &amp;#34;$&amp;#34;, display: false}, {left: &amp;#34;\\(&amp;#34;, right: &amp;#34;\\)&amp;#34;, display: false} ] }); }); &amp;lt;/script&amp;gt; Somehow, the code block $$.",
   "inLanguage" : "en",
-  "wordCount": 155,
+  "wordCount": 175,
   "datePublished" : "2019-01-31T12:19:59",
   "dateModified" : "2019-01-31T12:19:59",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -336,6 +336,15 @@ x_{21} <span class="err">&amp;</span>x_{22} <span class="err">&amp;</span>\cdots
 x_{n1} <span class="err">&amp;</span>x_{n2} <span class="err">&amp;</span>\cdots <span class="err">&amp;</span>x_{np}
 \end{array}\right)
 $$
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+$$
+Z = \begin{pmatrix}
+a <span class="err">&amp;</span>b\\
+c <span class="err">&amp;</span>d
+\end{pmatrix}
+$$
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div>
 $$
@@ -346,6 +355,15 @@ x_{21} &x_{22} &\cdots &x_{2p}\\
 \ldots &\ldots &\ldots &\ldots\\
 x_{n1} &x_{n2} &\cdots &x_{np}
 \end{array}\right)
+$$
+</div>
+
+<div>
+$$
+Z=\begin{pmatrix}
+a &b\\
+c &d
+\end{pmatrix}
 $$
 </div>
 

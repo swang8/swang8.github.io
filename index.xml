@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jan 2019 14:03:01 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Big History Project</title>
+      <link>https://swang8.github.io/blog/big-history/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:01 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/blog/big-history/</guid>
+      <description>The amazing BIG HISTORY PROJECT, https://www.bighistoryproject.com</description>
+    </item>
+    
+    <item>
+      <title>Math render problem</title>
+      <link>https://swang8.github.io/blog/math-render/</link>
+      <pubDate>Thu, 31 Jan 2019 12:19:59 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/blog/math-render/</guid>
+      <description>I have encountered a cople of problems when trying to show math formula in markdown files using $\KaTeX$.
+Issues: Inline formula rendering is not working Solution: add the following lines to the file themes/beautifulhugo/layouts/partials/head_custom.html.
+&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function() { renderMathInElement(document.body, { delimiters: [ {left: &amp;#34;$$&amp;#34;, right: &amp;#34;$$&amp;#34;, display: true}, {left: &amp;#34;\\[&amp;#34;, right: &amp;#34;\\]&amp;#34;, display: true}, {left: &amp;#34;$&amp;#34;, right: &amp;#34;$&amp;#34;, display: false}, {left: &amp;#34;\\(&amp;#34;, right: &amp;#34;\\)&amp;#34;, display: false} ] }); }); &amp;lt;/script&amp;gt; Somehow, the code block $$.</description>
+    </item>
     
     <item>
       <title>Introduction</title>
@@ -22,7 +42,7 @@
 Two categories: supervised and unsupervised.
 Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
 Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
-Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ variable for the $ ith $ observation, where $ i=1,2,&amp;hellip;n $ and $ j=1,2,&amp;hellip;n $.</description>
+Notation and simple algebra Let the $X$ denotes a matrix. $X_{ij}$ represents the value of column $j$ and row $i$.</description>
     </item>
     
     <item>
@@ -48,13 +68,15 @@ Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ 
     </item>
     
     <item>
-      <title>Personal Finance Series Cheat Sheet</title>
+      <title>Personal Finance Series by Richard Reis</title>
       <link>https://swang8.github.io/blog/2019-01-28-financial-cheat-sheet/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/blog/2019-01-28-financial-cheat-sheet/</guid>
-      <description>See the original link: https://medium.com/personal-finance-series-by-richard-reis/i-wrote-about-finance-for-a-year-heres-all-you-need-to-know-6cbd6bd78743
-You can retire well before your sixties, it’s simple math (4). How? Thanks to a technique used by most people who retired early. It’s called the 4% rule (30). How much do you need to retire? Find out how much you spend every year and multiply that number by 25. If I gave you that amount tomorrow, you’d never have to work a day in your life again (3).</description>
+      <description>The original link https://medium.com/personal-finance-series-by-richard-reis/{:target=&amp;rdquo;_blank&amp;rdquo; rel=&amp;ldquo;noopener&amp;rdquo;}
+Cheat sheet You can retire well before your sixties, it’s simple math (4).
+But How? Thanks to a technique used by most people who retired early. It’s called the 4% rule (30).
+How much do you need to retire? Find out how much you spend every year and multiply that number by 25. If I gave you that amount tomorrow, you’d never have to work a day in your life again ([3]()).</description>
     </item>
     
     <item>

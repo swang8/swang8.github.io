@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Deep Trace</title>
+    <link>https://swang8.github.io/tags/tips/</link>
+    <description>Recent content in Tips on Deep Trace</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
+    <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
+    <lastBuildDate>Thu, 31 Jan 2019 12:19:59 -0600</lastBuildDate>
+    
+	<atom:link href="https://swang8.github.io/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Math render problem</title>
+      <link>https://swang8.github.io/blog/math-render/</link>
+      <pubDate>Thu, 31 Jan 2019 12:19:59 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/blog/math-render/</guid>
+      <description>I have encountered a cople of problems when trying to show math formula in markdown files using $\KaTeX$.
+Issues: Inline formula rendering is not working Solution: add the following lines to the file themes/beautifulhugo/layouts/partials/head_custom.html.
+&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function() { renderMathInElement(document.body, { delimiters: [ {left: &amp;#34;$$&amp;#34;, right: &amp;#34;$$&amp;#34;, display: true}, {left: &amp;#34;\\[&amp;#34;, right: &amp;#34;\\]&amp;#34;, display: true}, {left: &amp;#34;$&amp;#34;, right: &amp;#34;$&amp;#34;, display: false}, {left: &amp;#34;\\(&amp;#34;, right: &amp;#34;\\)&amp;#34;, display: false} ] }); }); &amp;lt;/script&amp;gt; Somehow, the code block $$.</description>
+    </item>
+    
+  </channel>
+</rss>

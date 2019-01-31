@@ -26,6 +26,19 @@ Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ 
     </item>
     
     <item>
+      <title>Introduction</title>
+      <link>https://swang8.github.io/books/mla/intro/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/mla/intro/</guid>
+      <description>An overview of statistial learning Statistical learning refers to a vast set of tools for understanding data.
+Two categories: supervised and unsupervised.
+Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
+Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
+Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ variable for the $ ith $ observation, where $ i=1,2,&amp;hellip;n $ and $ j=1,2,&amp;hellip;n $.</description>
+    </item>
+    
+    <item>
       <title>Creamy cajun chicken pasta</title>
       <link>https://swang8.github.io/blog/creamy-cajun-chicken-pasta/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>

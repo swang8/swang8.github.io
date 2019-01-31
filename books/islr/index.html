@@ -10,6 +10,9 @@
   <title>Introduction to Statistial Learning with applications in R - Deep Trace</title>
   <meta property="og:title" content="Introduction to Statistial Learning with applications in R" />
   <meta name="twitter:title" content="Introduction to Statistial Learning with applications in R" />
+  <meta name="description" content="PDF copy provided by the authors: http://www-bcf.usc.edu/~gareth/ISL/ ">
+  <meta property="og:description" content="PDF copy provided by the authors: http://www-bcf.usc.edu/~gareth/ISL/ ">
+  <meta name="twitter:description" content="PDF copy provided by the authors: http://www-bcf.usc.edu/~gareth/ISL/ ">
   <meta name="author" content="S Wang"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -32,10 +35,12 @@
 </script>
 
 <meta property="og:title" content="Introduction to Statistial Learning with applications in R" />
+<meta property="og:description" content="PDF copy provided by the authors: http://www-bcf.usc.edu/~gareth/ISL/ ">
 <meta property="og:url" content="https://swang8.github.io/books/islr/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Deep Trace" />
   <meta name="twitter:title" content="Introduction to Statistial Learning with applications in R" />
+  <meta name="twitter:description" content="PDF copy provided by the authors: http://www-bcf.usc.edu/~gareth/ISL/ ">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@shichenTX" />
   <meta name="twitter:creator" content="@shichenTX" />
@@ -55,6 +60,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="https://swang8.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://swang8.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+    </script>
 
 
 
@@ -77,7 +95,7 @@
         
           
             <li>
-              <a title="Blog" href="/blog">Blog</a>
+              <a title="Blog" href="/blog/">Blog</a>
             </li>
           
         
@@ -88,9 +106,7 @@
                 
                   <a href="/books/islr">ISLR</a>
                 
-                  <a href="/books/intro_ml">Intro to machine learning</a>
-                
-                  <a href="/books/compstats">Computer age statistial inference</a>
+                  <a href="/books/mla">Machine Learning in Action</a>
                 
               </div>
             </li>
@@ -99,6 +115,12 @@
           
             <li>
               <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
             </li>
           
         
@@ -204,6 +226,13 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
+          <div class="well">
+            <p>PDF copy provided by the authors:
+<a href="http://www-bcf.usc.edu/~gareth/ISL/">http://www-bcf.usc.edu/~gareth/ISL/</a>
+<img src="http://www-bcf.usc.edu/~gareth/ISL/ISL%20Cover%202.jpg" alt="" /></p>
+
+          </div>
+        
         <div class="posts-list">
           
             <article class="post-preview">
@@ -223,7 +252,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;105&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;93&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;S Wang
@@ -244,162 +273,6 @@ Notation and simple algebra The $ X_{ij} $ represents the value for the $ jth $ 
                 
               </div>
 
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/">
-                <h2 class="post-title">Big Image Sample</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Using Multiple Images
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 7, 2017
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;191&nbsp;words
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;S Wang
-  
-  
-</span>
-
-
-              </p>
-              <div class="post-entry">
-                
-                  <p>The image banners at the top of the page are refered to as &ldquo;bigimg&rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.</p>
-                  <a href="https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://swang8.github.io/tags/example/">example</a>&nbsp;
-                  
-                    <a href="https://swang8.github.io/tags/bigimg/">bigimg</a>&nbsp;
-                  
-                </div>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://swang8.github.io/books/islr/2017-03-05-math-sample/">
-                <h2 class="post-title">Math Sample</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Using KaTeX
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 5, 2017
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;120&nbsp;words
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;S Wang
-  
-  
-</span>
-
-
-              </p>
-              <div class="post-entry">
-                
-                  <p>KaTeX can be used to generate complex math formulas server-side.</p>
-
-<p>$$
-\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots
-$$</p>
-
-<p>Additional details can be found on <a href="https://github.com/Khan/KaTeX">GitHub</a> or on the <a href="http://tiddlywiki.com/plugins/tiddlywiki/katex/">Wiki</a>.</p>
-                  <a href="https://swang8.github.io/books/islr/2017-03-05-math-sample/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://swang8.github.io/tags/example/">example</a>&nbsp;
-                  
-                    <a href="https://swang8.github.io/tags/math/">math</a>&nbsp;
-                  
-                </div>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://swang8.github.io/books/islr/2016-03-08-code-sample/">
-                <h2 class="post-title">Code Sample</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Using Hugo or Pygments
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 8, 2016
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;184&nbsp;words
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;S Wang
-  
-  
-</span>
-
-
-              </p>
-              <div class="post-entry">
-                
-                  <p>The following are two code samples using syntax highlighting.</p>
-                  <a href="https://swang8.github.io/books/islr/2016-03-08-code-sample/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://swang8.github.io/tags/example/">example</a>&nbsp;
-                  
-                    <a href="https://swang8.github.io/tags/code/">code</a>&nbsp;
-                  
-                </div>
               
 
             </article>

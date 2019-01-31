@@ -8,27 +8,12 @@
   </url>
   
   <url>
-    <loc>https://swang8.github.io/books/compstats/</loc>
-    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/intro_ml/</loc>
-    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/islr/</loc>
-    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://swang8.github.io/about/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://swang8.github.io/receipes/creamy-cajun-chicken-pasta/</loc>
+    <loc>https://swang8.github.io/blog/creamy-cajun-chicken-pasta/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,78 +23,17 @@
   </url>
   
   <url>
-    <loc>https://swang8.github.io/books/2017-03-07-bigimg-sample/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/compstats/2017-03-07-bigimg-sample/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/intro_ml/2017-03-07-bigimg-sample/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/islr/2017-03-07-bigimg-sample/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/2017-03-05-math-sample/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/compstats/2017-03-05-math-sample/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/intro_ml/2017-03-05-math-sample/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/islr/2017-03-05-math-sample/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/2016-03-08-code-sample/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/compstats/2016-03-08-code-sample/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/intro_ml/2016-03-08-code-sample/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/books/islr/2016-03-08-code-sample/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://swang8.github.io/</loc>
     <lastmod>2019-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://swang8.github.io/books/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://swang8.github.io/tags/bigimg/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+    <loc>https://swang8.github.io/tags/cajun/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -119,25 +43,50 @@
   </url>
   
   <url>
-    <loc>https://swang8.github.io/tags/code/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+    <loc>https://swang8.github.io/tags/chicken/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://swang8.github.io/tags/example/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+    <loc>https://swang8.github.io/tags/finace/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://swang8.github.io/tags/math/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://swang8.github.io/books/islr/</loc>
+    <lastmod>2019-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/books/mla/</loc>
   </url>
   
   <url>
     <loc>https://swang8.github.io/blog/freedom_build_101/</loc>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/tags/passive-income/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/tags/paste/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/tags/receipe/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://swang8.github.io/tags/retirement/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -147,13 +96,8 @@
   
   <url>
     <loc>https://swang8.github.io/tags/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://swang8.github.io/receipes/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

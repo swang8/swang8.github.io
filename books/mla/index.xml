@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep Trace</title>
-    <link>https://swang8.github.io/books/</link>
-    <description>Recent content on Deep Trace</description>
+    <title>Machine Learning in Action on Deep Trace</title>
+    <link>https://swang8.github.io/books/mla/</link>
+    <description>Recent content in Machine Learning in Action on Deep Trace</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
     
-	<atom:link href="https://swang8.github.io/books/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://swang8.github.io/books/mla/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

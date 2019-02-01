@@ -11,9 +11,9 @@
   <meta property="og:title" content="Chapter2" />
   <meta name="twitter:title" content="Chapter2" />
   <meta name="description" content="Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
- $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.">
+ $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.">
   <meta property="og:description" content="Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
- $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.">
+ $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.">
   <meta name="twitter:description" content="Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between …">
   <meta name="author" content="S Wang"/><script type="application/ld+json">
 {
@@ -64,9 +64,9 @@
   },
   "headline": "Chapter2",
   "description" : "Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
- $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.",
+ $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.",
   "inLanguage" : "en",
-  "wordCount": 691,
+  "wordCount": 1009,
   "datePublished" : "2019-02-01T14:46:09",
   "dateModified" : "2019-02-01T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -87,7 +87,7 @@
 
 <meta property="og:title" content="Chapter2" />
 <meta property="og:description" content="Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
- $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.">
+ $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.">
 <meta property="og:image" content="https://swang8.github.io/images/mollusc01.png" />
 <meta property="og:url" content="https://swang8.github.io/books/islr/chapter2/" />
 <meta property="og:type" content="website" />
@@ -307,7 +307,7 @@ Y=f(X)+\epsilon
 $$
 </div>
 
-<p>Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome <code>error term</code>, which is independent of $X$ and has mean <code>zero</code>. In this formulation, $f$ represents the <code>systematic</code> informationa bout $X$ provides about $Y$.</p>
+<p>Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random <code>error term</code>, which is independent of $X$ and has mean <code>zero</code>. In this formulation, $f$ represents the <code>systematic</code> informationa $X$ provides about $Y$.</p>
 
 <h3 id="why-estimate-f">Why estimate $f$ ?</h3>
 
@@ -357,7 +357,45 @@ $$
 <li><p><em><u>Which predictors are associated with the response?</u></em> It&rsquo;s often the case that only a small fraction of the repdictors are substantially associated with $Y$. Identifying a few <em>important</em> predictors among a large set of possible variables can be very useful.</p></li>
 
 <li><p><em><u>What is the relationship between the response and each predictor?</u></em> Some predictors may have a positive relationship with $Y$, while others may have opposite relationships. Depending on the complexity of $f$, the relationship between the response and a given predictor may also depend on the valurs of the other predictors.</p></li>
+
+<li><p><em><u>Can the relationship between $Y$ and each predictor be adequately summarized using a linear equation, or is the relatioship more complicated?</u></em> Historically, most mthods for estimating $f$ have taken a linear form. In some situations, such an assumption is resonable or even desirable. But often the true relationship is more complicated, in which case a linear model may not provide an accurate representation of the relationship between the input and output variables.</p></li>
 </ul>
+
+<h3 id="how-do-we-estimate-f">How do we estimate $f$ ?</h3>
+
+<p>We will explore many linear and non-linear approaches for estimating $f$. However, these methods generally share certain characteristics.</p>
+
+<p><strong>Training data</strong>, data that will be used to train, or teach, our method how to estimate $f$.</p>
+
+<p>The goal is to apply a statistical learning method to the <em>training data</em> in order to estimate the unknown function $f$. In other words, we want to find a funtion $\hat{f}$ that $Y\approx\hat{f}(X)$ for any given observation $(X, Y)$.</p>
+
+<p>Broadly speaking, most statitical learning methods for this task can be characterized as either <code>parametric</code> or <code>non-parametric</code>.</p>
+
+<h4 id="u-parametric-methods-u"><u>Parametric Methods</u></h4>
+
+<p>Parametric methods involve a two-step model-based approach.</p>
+
+<ol>
+<li>First, we make an assumption about the functional form, or shape, of $f$. For example, one very simple assumption is that $f$ is linear in $X$:</li>
+</ol>
+
+<div>
+$$
+f(X)=\beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + \cdots+\beta_{p}X_{p}
+$$
+</div>
+
+<p>This is <em>linear model</em>. Once we have assumed that $f$ is linear, the problem of estimation $f$ is greatly simplified. Instead of having to estimate an entirely arbitrary p-dimentional function $f(X)$, one only needs to estimate the <em>p+1</em> coefficients $\beta$.</p>
+
+<ol>
+<li>After a model has been selected, we need a procedure that uses the training data to <em>fit</em> or <em>train</em> the model. In the case of the linear model, we need to estimate the parameters $\beta<em>{0}$ , $\beta</em>{1}$ , $\ldots$ , $\beta_{p}$. That is, we want to find values of these parameters such that</li>
+</ol>
+
+<div>
+$$
+Y \approx \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + \cdots + \beta_{p}X_{p}
+$$
+</div>
 
 
         

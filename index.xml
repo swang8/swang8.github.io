@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Thu, 31 Jan 2019 14:03:01 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 01 Feb 2019 14:46:09 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter2</title>
+      <link>https://swang8.github.io/books/islr/chapter2/</link>
+      <pubDate>Fri, 01 Feb 2019 14:46:09 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/chapter2/</guid>
+      <description>Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
+ $$ Y=f(X)+\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.</description>
+    </item>
     
     <item>
       <title>Big History Project</title>
@@ -42,7 +52,7 @@ Issues: Inline formula rendering is not working Solution: add the following line
 Two categories: supervised and unsupervised.
 Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
 Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
-Notation and simple algebra Let the $X$ denotes a matrix. $X_{ij}$ represents the value of column $j$ and row $i$.</description>
+Notation and simple algebra Let the $X$ denotes a matrix. $X_{ij}$ represents the value of row $i$ and column $j$.</description>
     </item>
     
     <item>

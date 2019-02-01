@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction to Statistial Learning with applications in R on Deep Trace</title>
-    <link>https://swang8.github.io/books/islr/</link>
-    <description>Recent content in Introduction to Statistial Learning with applications in R on Deep Trace</description>
+    <title>Islr on Deep Trace</title>
+    <link>https://swang8.github.io/tags/islr/</link>
+    <description>Recent content in Islr on Deep Trace</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
     <lastBuildDate>Fri, 01 Feb 2019 14:46:09 -0600</lastBuildDate>
     
-	<atom:link href="https://swang8.github.io/books/islr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://swang8.github.io/tags/islr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,19 +20,6 @@
       <guid>https://swang8.github.io/books/islr/chapter2/</guid>
       <description>Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
  $$ Y=f(X)+\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.</description>
-    </item>
-    
-    <item>
-      <title>Introduction</title>
-      <link>https://swang8.github.io/books/islr/intro/</link>
-      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
-      <author>shichen.wang@gmail.com (S Wang)</author>
-      <guid>https://swang8.github.io/books/islr/intro/</guid>
-      <description>An overview of statistial learning Statistical learning refers to a vast set of tools for understanding data.
-Two categories: supervised and unsupervised.
-Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
-Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
-Notation and simple algebra Let the $X$ denotes a matrix. $X_{ij}$ represents the value of row $i$ and column $j$.</description>
     </item>
     
   </channel>

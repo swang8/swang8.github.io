@@ -66,7 +66,7 @@
   "description" : "Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
  $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.",
   "inLanguage" : "en",
-  "wordCount": 2241,
+  "wordCount": 2456,
   "datePublished" : "2019-02-01T14:46:09",
   "dateModified" : "2019-02-01T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -450,6 +450,22 @@ $$
 MSE=\frac{1}{n}\sum_{j=0}^n (y_i-\hat{f}(x_i))^2
 $$
 </div>
+
+<p>The MSE is computed using the training data that was used to fit the model, and so should more accurately be refered to as the <em>training MSE</em>. But in general, we do not really care how well the method works on the training data. Rather, <em>we are interested in the accuracy of the predictions that we obtain when we apply our method to previously unseen test data.</em> Why? Think about training model to predict stock price.</p>
+
+<p>Suppose that we fit our statistical learning method on our training observations ${(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)}$, and we obtain the estimate $\hat{f}$. We can then compute $\hat{f}(x_1), \hat{f}(x_2), \ldots. \hat{f}(x_n)$. If these are approximately equal to $y_1,y_2,\ldots,y_n$, then the training MSE is small. However, we are really not interested in whether $\hat{f}(x_i) \approx y_i$; instead, we want to know where $\hat{f}(x_0)$ is approximately equal to $y_0$, where $(x_0, y_0)$ is <strong>a previously unseen test observation not used to train the statistical learning method.</strong></p>
+
+<p>We want to choose the method that gives the lowest <strong>test</strong> MSE, as opposed to the lowest training MSE. In other words, if we had a large number of test observations, we could compute</p>
+
+<div>
+$$
+Ave(y_0 - \hat{f}(x_0))^2
+$$
+</div> 
+
+<p>The average square prediction error for these test observations $(x_0, y_0)$.</p>
+
+<h3 id="the-bias-variation-trade-off">The Bias-Variation Trade-Off</h3>
 
 
         

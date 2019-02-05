@@ -19,7 +19,7 @@
       <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/chapter2/</guid>
       <description>Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
- $$ Y=f(X)+\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a randome error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa bout $X$ provides about $Y$.</description>
+ $$ Y=f(X)+\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.</description>
     </item>
     
   </channel>

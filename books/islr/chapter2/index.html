@@ -66,7 +66,7 @@
   "description" : "Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
  $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.",
   "inLanguage" : "en",
-  "wordCount": 2456,
+  "wordCount": 2505,
   "datePublished" : "2019-02-01T14:46:09",
   "dateModified" : "2019-02-01T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -466,6 +466,14 @@ $$
 <p>The average square prediction error for these test observations $(x_0, y_0)$.</p>
 
 <h3 id="the-bias-variation-trade-off">The Bias-Variation Trade-Off</h3>
+
+<p>For a given value $x_0$, the expected test MSE can be decomposed into the sum of three fundamental quantities: the <em>variance</em> of $\hat{f}(x_0)$, the squared <em>bias</em> of $\hat{f}(x_0)$ and the variance of the error term $\epsilon$. That is</p>
+
+<div>
+$$
+E(y_0 - \hat{f}(x_0))^2 = Var(\hat{f}(x_0)) + [Bias(\hat{f}(x_0))]^2 + Var(\epsilon)
+$$
+</div>
 
 
         

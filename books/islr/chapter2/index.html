@@ -66,7 +66,7 @@
   "description" : "Statistical Learning What is statistial learning Suppose we observe a quantitative response $Y$ and $p$ different predictors, $X_1, X_2, \ldots,X_p$ . We assume that there is a relationship between $Y$ and $X=(X_1, X_2,\ldots,X_p)$, which can be written as
  $$ Y=f(X)&#43;\epsilon $$  Here $f$ is some fixed but unknown fucntion of $X_1,X_2,\ldots,X_p$, and $\epsilon$ is a random error term, which is independent of $X$ and has mean zero. In this formulation, $f$ represents the systematic informationa $X$ provides about $Y$.",
   "inLanguage" : "en",
-  "wordCount": 2505,
+  "wordCount": 2923,
   "datePublished" : "2019-02-01T14:46:09",
   "dateModified" : "2019-02-01T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -132,7 +132,6 @@
         });
     });
 </script>
-
 
 
 
@@ -474,6 +473,54 @@ $$
 E(y_0 - \hat{f}(x_0))^2 = Var(\hat{f}(x_0)) + [Bias(\hat{f}(x_0))]^2 + Var(\epsilon)
 $$
 </div>
+
+<p>Here the notation $E(y_0-\hat{f}(x_0))^2$ defines the <em>exptected test MSE</em>, and refers to the average test MSE that we would obtain if we repeatedly estimated $f$ using a large number of training sets, and tested each at $x_0$. The overall expected test MSE can be computed by averaging $E(y_0-\hat{f}(x_0))^2$ overall possible values of $x_0$ in the test set.</p>
+
+<p>The equation shows that in order to minimize the expected test error, we need to select a statistical learning method that simultaneously achieves <em>low variance</em> and <em>low bias</em>.</p>
+
+<p>What do we mean by the the <code>variance</code> and <code>bias</code> of a statistical learning method?</p>
+
+<p><code>Variance</code> referes to the amount of by which $\hat{f}$ would change if we estimated it using a different training data set. Since the training data are used to fit the statistical method, different training data sets will result in a different $\hat{f}$. But ideally the estimate of $f$ should not vary too much between training sets.</p>
+
+<p>If a method has high variance then small changes in the training data can result in large changes in $\hat{f}$. In general, more flexible statistical methods have higher variance.</p>
+
+<p><code>Bias</code> referes to theerro that is introduced by approximating a real-life problem, which may be extremely complicated, by as much simpler model.</p>
+
+<p>As a general ruls, as we use more flexible methods, the variance will increase and the bias will decrease.</p>
+
+<h3 id="the-classification-setting">The Classification Setting</h3>
+
+<p>Suppose that we seek to estimate $f$ on the basis of training observations ${(x_1, y_1), \ldots, (x_n, y_n)}$, where now $y_1,\ldots,y_n$ are qualitative. The training <em>error rate</em> is calculated as the proportion of mistakes that are made if we apply our estimte $\hat{f}$ to the training observations:</p>
+
+<div>
+$$
+\frac{1}{n}\sum_{i=1}^n I(y_i \neq \hat{y}_0)
+$$
+</div>
+
+<p>Here $\hat{y}_i$ is the predicted class label for the <em>ith</em> observation using $\hat{f}$. And $I(y_i \neq \hat{y}_i)$ is an <em>indicator variable</em> that equals 1 if $y_i \neq \hat{y}_i$ and zero if $y_i = \hat{y}_i$.</p>
+
+<p>As in the regression setting, we are most interested in the error rates that result from applying our classifier to test observations that were not used in training. The <em>test error rate</em> associated with a set of test observations of the form $(x_0, y_0)$ is given by</p>
+
+<div>
+$$
+Ave(I(y_0 \neq \hat{y}_0))
+$$
+</div>
+
+<h4 id="the-bayes-classifier">The Bayes Classifier</h4>
+
+<p>To minimize the test error rate: assign each observation to the most likely class given its predictor values.</p>
+
+<p>The conditional probability:</p>
+
+<div>
+$$
+Pr(Y=j|X=x_0)
+$$
+</div>
+
+<p>It is the probability that $Y = j$, given the observed predictor vector $x_0$. This very simple classifier is called the <em><code>bayes classifier</code></em>.</p>
 
 
         

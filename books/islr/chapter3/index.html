@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Chapter3 - Deep Trace</title>
-  <meta property="og:title" content="Chapter3" />
-  <meta name="twitter:title" content="Chapter3" />
+  <title>Chapter3: Linear Regression - Deep Trace</title>
+  <meta property="og:title" content="Chapter3: Linear Regression" />
+  <meta name="twitter:title" content="Chapter3: Linear Regression" />
   <meta name="description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
 Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
  $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.">
@@ -54,7 +54,7 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
         "position": 3,
         "item": {
           "@id": "https://swang8.github.io/books/islr/chapter3/",
-          "name": "Chapter3"
+          "name": "Chapter3 linear regression"
         }
     }]
 }
@@ -65,12 +65,12 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
   "author": {
     "name" : "S Wang"
   },
-  "headline": "Chapter3",
+  "headline": "Chapter3: Linear Regression",
   "description" : "Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
 Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
  $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.",
   "inLanguage" : "en",
-  "wordCount": 2336,
+  "wordCount": 2781,
   "datePublished" : "2019-02-07T14:46:09",
   "dateModified" : "2019-02-07T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -89,7 +89,7 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
 }
 </script>
 
-<meta property="og:title" content="Chapter3" />
+<meta property="og:title" content="Chapter3: Linear Regression" />
 <meta property="og:description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
 Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
  $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.">
@@ -97,7 +97,7 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
 <meta property="og:url" content="https://swang8.github.io/books/islr/chapter3/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Deep Trace" />
-  <meta name="twitter:title" content="Chapter3" />
+  <meta name="twitter:title" content="Chapter3: Linear Regression" />
   <meta name="twitter:description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
 Simple Linear Regression Simple linear regression is a straightforward approach for …">
   <meta name="twitter:image" content="https://swang8.github.io/images/mollusc01.png" />
@@ -279,7 +279,7 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="books-heading">
               
-                <h1>Chapter3</h1>
+                <h1>Chapter3: Linear Regression</h1>
               
               
                 <hr class="small">
@@ -550,6 +550,83 @@ $$
 
 <h3 id="estimating-the-regression-coefficients">Estimating the Regression Coefficients</h3>
 
+<p>The paraeters are estimated using the same least squares approach that we saw in the context of simple linear regression. We choose $\beta_0, \beta_1\ldots,\beta_p$ to minimize the sum of squared residuals.</p>
+
+<div>
+$$
+\begin{aligned}
+RSS &= \sum_{i=1}^n(y_i - \hat{y}_i)^2 \\
+&= \sum_{i=1}^n(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_{i1} - \hat{\beta}_2 x_{i2} - \cdots - \hat{\beta}_p x_{ip})^2
+\end{aligned}
+$$
+</div>
+
+<h3 id="some-important-questions">Some Important questions</h3>
+
+<p>When we perform multiple linear regression, we usually are interested in answering a few important questions:</p>
+
+<ol>
+<li><p><em>Is at least one of the predictors $X_1, X_2, \ldots, X_p$ useful predicting the response?</em></p></li>
+
+<li><p><em>Do all the predictors help to explain $Y$, or is only a subset of the predictors useful?</em></p></li>
+
+<li><p><em>How well does the model fit the data?</em></p></li>
+
+<li><p><em>Given a set of predictor values, what response value should we predict, and how accuracy is our prediciton?</em></p></li>
+</ol>
+
+<p><u>One: Is There a Relationship Between the Response and Predictors?</u></p>
+
+<p>Recall that in the simple linear regression setting, in order to determine whether there is a relationship between the response and the predictor we can simply check whether $\beta_1 = 0$. In the multiple regression setting with $p$ predictors, we need to ask whether all of the regression coefficients are zero, i.e. whether $\beta_1 = \beta-2 = \cdots = \beta_p = 0$. As in the simple linear regression setting, we use a hypothesis test to answer this questions We test the null hypothesis,</p>
+
+<div>
+$$
+H_0: \beta_1 = \beta_2 = \cdots = \beta_p = 0
+$$
+</div>
+
+<p>versus the alternative</p>
+
+<div>
+$$
+H_a: at\ least\ one\ \beta_j\ is\ non-zero
+$$
+</div>
+
+<p>This hypothesis test is performed by computing the <code>F-statistic</code>,</p>
+
+<div>
+$$
+F = \frac{(TSS-RSS)/p}{RSS/(n-p-1)},
+$$
+</div>
+
+<p>where , as with simple linear regression, $TSS=\sum(y_i - \bar{y})^2$ and $RSS=\sum(y_i - \hat{y}_i)^2$.</p>
+
+<p>If the linear model assumptions are correct, one can show that</p>
+
+<div>
+$$
+E\{ RSS/(n-p-1) \} = \sigma^2
+$$
+</div>
+
+<p>and that, provided $H_0$ is true,</p>
+
+<div>
+$$
+E\{ (TSS-RSS)/p \} = \sigma^2
+$$
+</div>
+
+<p>Hence, when there is <strong>no</strong> relationship between the response and predictors, the <code>F-statistic</code> to take on value close to 1; on the other hand, if $H_a$ is true, then $E{(TSS-RSS)/p} &gt; \sigma^2$, so we expect <code>F-statistic</code> to take on value greater than 1.</p>
+
+<p>How large does the <code>F-statistic</code> need to be before we can reject $H_0$ and conclude that there is a relationship?  It turns out the answer depends on the values of $n$ and $p$.</p>
+
+<p>When $n$ is large, and <code>F-statistic</code> that is just a little larger than 1 might still provide evidence against $H_0$. In contrast, a larger <code>F-statistic</code> is needed to reject $H_0$ if $n$ is small.</p>
+
+<p>When $H_0$ is  true and the error term $\epsilon_i$ have a normal distribution, the <code>F-statistic</code> follows an F-distribution. P-value can be calculated based on the distribution.</p>
+
 
         
           <div class="blog-tags">
@@ -573,7 +650,7 @@ $$
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;text=Chapter3&amp;via=shichenTX" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;text=Chapter3%3a%20Linear%20Regression&amp;via=shichenTX" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -594,28 +671,28 @@ $$
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3%3a%20Linear%20Regression" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3%3a%20Linear%20Regression" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3%3a%20Linear%20Regression" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;description=Chapter3" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;description=Chapter3%3a%20Linear%20Regression" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -632,7 +709,7 @@ $$
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/books/islr/chapter2/">Chapter2</a></li>
+            <li><a href="/books/islr/chapter2/">Chapter2: Basic concepts of Statistical Learning</a></li>
           
           </ul>
           
@@ -643,7 +720,7 @@ $$
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://swang8.github.io/books/islr/chapter2/" data-toggle="tooltip" data-placement="top" title="Chapter2">&larr; Previous Post</a>
+              <a href="https://swang8.github.io/books/islr/chapter2/" data-toggle="tooltip" data-placement="top" title="Chapter2: Basic concepts of Statistical Learning">&larr; Previous Post</a>
             </li>
           
           

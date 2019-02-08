@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Fri, 01 Feb 2019 14:46:09 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 07 Feb 2019 14:46:09 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/tags/statistics-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter3</title>
+      <link>https://swang8.github.io/books/islr/chapter3/</link>
+      <pubDate>Thu, 07 Feb 2019 14:46:09 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/chapter3/</guid>
+      <description>Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
+ $$ Y \approx \beta_{0} + \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.</description>
+    </item>
     
     <item>
       <title>Chapter2</title>

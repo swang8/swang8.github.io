@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Fri, 01 Feb 2019 14:46:09 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 07 Feb 2019 14:46:09 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/books/islr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter3</title>
+      <link>https://swang8.github.io/books/islr/chapter3/</link>
+      <pubDate>Thu, 07 Feb 2019 14:46:09 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/chapter3/</guid>
+      <description>Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
+ $$ Y \approx \beta_{0} + \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.</description>
+    </item>
     
     <item>
       <title>Chapter2</title>
@@ -33,15 +44,6 @@ Two categories: supervised and unsupervised.
 Supervised: Build models based on known input and output data, then use the model for prediction or estimation.
 Unsupervised: There are inputs but no supervised outputs. We can learn relationships and structures from such data.
 Notation and simple algebra Let the $X$ denotes a matrix. $X_{ij}$ represents the value of row $i$ and column $j$.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://swang8.github.io/books/islr/chapter3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>shichen.wang@gmail.com (S Wang)</author>
-      <guid>https://swang8.github.io/books/islr/chapter3/</guid>
-      <description></description>
     </item>
     
   </channel>

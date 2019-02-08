@@ -7,9 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Deep Trace - Deep Trace</title>
-  <meta property="og:title" content="Deep Trace" />
-  <meta name="twitter:title" content="Deep Trace" />
+  <title>Chapter3 - Deep Trace</title>
+  <meta property="og:title" content="Chapter3" />
+  <meta name="twitter:title" content="Chapter3" />
+  <meta name="description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
+ $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.">
+  <meta property="og:description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
+ $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.">
+  <meta name="twitter:description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for …">
   <meta name="author" content="S Wang"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -46,7 +54,7 @@
         "position": 3,
         "item": {
           "@id": "https://swang8.github.io/books/islr/chapter3/",
-          "name": ""
+          "name": "Chapter3"
         }
     }]
 }
@@ -57,14 +65,16 @@
   "author": {
     "name" : "S Wang"
   },
-  "headline": "",
-  "description" : "",
+  "headline": "Chapter3",
+  "description" : "Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
+ $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.",
   "inLanguage" : "en",
-  "wordCount": 0,
-  "datePublished" : "0001-01-01T00:00:00",
-  "dateModified" : "0001-01-01T00:00:00",
+  "wordCount": 2336,
+  "datePublished" : "2019-02-07T14:46:09",
+  "dateModified" : "2019-02-07T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
-  "keywords" : [ "" ],
+  "keywords" : [ "islr, statistics learning, R" ],
   "mainEntityOfPage" : "https://swang8.github.io/books/islr/chapter3/",
   "publisher" : {
     "@type": "Organization",
@@ -79,12 +89,17 @@
 }
 </script>
 
-<meta property="og:title" content="Deep Trace" />
+<meta property="og:title" content="Chapter3" />
+<meta property="og:description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
+ $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.">
 <meta property="og:image" content="https://swang8.github.io/images/mollusc01.png" />
 <meta property="og:url" content="https://swang8.github.io/books/islr/chapter3/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Deep Trace" />
-  <meta name="twitter:title" content="Deep Trace" />
+  <meta name="twitter:title" content="Chapter3" />
+  <meta name="twitter:description" content="Linear Regression Linear regression is a very simple supervised learning methods, though still very useful.
+Simple Linear Regression Simple linear regression is a straightforward approach for …">
   <meta name="twitter:image" content="https://swang8.github.io/images/mollusc01.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@shichenTX" />
@@ -254,7 +269,29 @@
 
 
 
-  <div class="intro-header"></div>
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="books-heading">
+              
+                <h1>Chapter3</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
 
     
@@ -264,6 +301,266 @@
       <article role="main" class="blog-post">
         
 
+<h1 id="linear-regression">Linear Regression</h1>
+
+<p><em>Linear regression</em> is a very simple supervised learning methods, though still very useful.</p>
+
+<h2 id="simple-linear-regression">Simple Linear Regression</h2>
+
+<p><em>Simple linear regression</em> is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.</p>
+
+<div>
+$$
+Y \approx \beta_{0} + \beta_{1}X
+$$
+</div>
+
+<p>In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the <em>intercept</em> and <em>slope</em> termes in the linear model. Together, $\beta_0$ and $\beta_1$ are know as the model <code>coefficients</code> or <code>parameters</code>. Once we have used our training data to produce estimates $\hat{\beta}_0$ and $\hat{\beta}_1$ for the model coefficients, we can predict the response $\hat{y}$.</p>
+
+<div>
+$$
+\hat{y} = \hat{\beta}_0 + \hat{\beta}_{1} x
+$$
+</div>
+
+<h3 id="estimate-the-coefficients">Estimate the Coefficients</h3>
+
+<p>In practic, $\beta_0$ and $\beta_1$ are unknown. So before we can use the equation to make predictions, we must use data to estimate the coefficients. Let</p>
+
+<div>
+$$
+(x_1,y_1), (x_2, y_2), \ldots, (x_n, y_n)
+$$
+</div>
+
+<p>represent $n$ observation pairs, each of which consists of a measurement of $X$ and a measurement of $Y$. Our goal is to obtain coefficient estimates $\hat{\beta}_0$ and $\hat{\beta}_1$ such that the linear model fits the avilable data well, that is, so that $y_i \approx \hat{\beta}_0 + \hat{\beta}_1 x_i$ for $i=1,2,\ldots,n$. In other words, we want to find an intercept $\hat{\beta}_0$ and a slope $\hat{\beta}_1$ such that the resulting line is as close a possible to the data points.</p>
+
+<p>There are number of ways of measuing <code>closeness</code>. However, by far the most common approach involes minimiizng the <code>least squares</code> criterion.</p>
+
+<p>Let $\hat{y} = \hat{\beta}_1 + \hat{\beta}_1 x_i$ be the prediction for $Y$ based on the *i*th values of $X$. The $e_i = y_i - \hat{y}_i$ represents the <em>ith</em> <code>residual</code> &ndash; this is the difference between the *i*th response value that is predicted by our linear model. We define the <code>residual sum of squares (RSS)</code> as</p>
+
+<div>
+$$
+RSS=e_1^2 + e_2^2 + \ldots + e_n^2
+$$
+</div>
+
+<p>or equivalently as
+<div>
+$$
+RSS = (y_1 - \hat{\beta}_0 - \hat{\beta}_1 x_1)^2 + (y_2 - \hat{\beta}_0 - \hat{\beta}_1 x_2)^2 + \ldots + (y_n - \hat{\beta}_0 - \hat{\beta}_1 x_n)^2
+$$
+</div></p>
+
+<p>The least squares approach choose $\hat{\beta}_0$ and $\hat{\beta}_1$ to minimize the RSS. Using some calculus, one can show that the minimizers are</p>
+
+<div>
+$$
+\begin{aligned}
+&\hat{\beta}_1 = \frac{\sum_{i=1}^n(x_i-\bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2},
+\\
+&\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x},\\
+&where, \\
+&\bar{y} \equiv \frac{1}{n} \sum_{i=1}^n y_i, \\
+&\bar{x} \equiv \frac{1}{n} \sum_{i=1}^n x_i
+\end{aligned}
+
+$$
+</div>
+
+<p>The aforementioned formula defines the <code>least squares coefficient estimates</code> for simple linear regression.</p>
+
+<h3 id="assessing-the-accuracy-of-the-coefficient-estimates">Assessing the accuracy of the Coefficient Estimates</h3>
+
+<p>We assume that the <em>true</em> relationship between $X$ and $Y$ takes for thorm $Y=f(X)+\epsilon$ for some unknown function $f$, where $\epsilon$ is a mean-zero reandom error term. If $f$ is to be approximated by a liner function, then we can write this relationship as
+<div>
+$$
+Y = \beta_0 + \beta_1X + \epsilon
+$$
+</div></p>
+
+<p>The model given in the formula defines the <em>population regression line</em>, which is the best linear approximation to the true relationship between $X$ and $Y$. The least squares regression coefficient estimates characterize the <code>least square line</code>.</p>
+
+<p>Using information from a sample to estimate characteristics of a large population. For example, suppose htat we are interested in knowing the population mean $\mu$ of some random variable $Y$. Unfortunately, $\mu$ is unknown, but we do have access to $n$ observations from $Y$, which we can use to estimate $\mu$. A reasonable estimate is $\hat{\mu} = \bar{y}$, where $\bar{y} = \frac{1}{n}\sum_{i=1}^ny_i$ is the sample mean. The sample mean and the population mean are different, but in general the sample mean will provide a good estimate of the population mean.</p>
+
+<p>The analogy between linear regression and estimation of the mean of a random variable is an apt one based on the concept of <code>bias</code>. If we use the sample mean $\hat{\mu}$ to estimate $\mu$, this estimate is <code>unbiased</code>, in the sense that on average, we expect $\hat{\mu}$ to equal to $\mu$. It means, if we could average a huge numbr of estimates of $\mu$ obtained from a huge number of sets of observations, then this average would <em>exactly</em> equal to $\mu$. Hence, an unbiased estimator does not <em>systematically</em> over- or under-estimate the true parameter.</p>
+
+<p>How accurate is hte sample mean $\hat{\mu}$ as an estimate of $\mu$?</p>
+
+<p>We have established that the average of $\hat{\mu}$s over many data sets will be very close to $\mu$, but that a single estimate of $\hat{\mu}$ may be sunstantial underestimate or overestimate of $\mu$. How far off will that single estimate of $\hat{\mu}$ be? In general, we answer this question by computing the <code>standard error</code> of $\hat{\mu}$, written as $SE(\hat{\mu})$. We have the well-known formula</p>
+
+<div>
+$$
+Var(\hat{\mu}) = SE(\hat{\mu})^2 = \frac{\sigma^2}{n}
+$$
+</div>
+
+<p>Where $\sigma$ is the standard deviatioin of each of the realizations $y_i$ of $Y$. The equation wells us how this deviation shrinks with $n$ &ndash; the more observations we have, the smaller the standard error of $\hat{\mu}$.</p>
+
+<p>The standard errors associated with $\hat{\beta}_0$ and $\hat{\beta}_1$ can be calculated as:</p>
+
+<div>
+$$
+\begin{aligned}
+&SE(\hat{\beta}_0)^2 = \sigma^2\Big[\frac{1}{n} + \frac{\bar{x}^2}{\sum_{i=1}^n (x_i - \bar{x})^2}\Big] \\
+&SE(\hat{\beta}_1)^2 = \frac{\sigma^2}{\sum_{i=1}^n (x_i - \bar{x})^2}
+\end{aligned}
+$$
+</div>
+
+<p>Where $\sigma^2 = Var(\epsilon)$. For these formalas to be strictly valid, we need to assume that the error $\epsilon_i$ for each observation are uncorrelated with common variance $\sigma^2$. Though this might not be true for many cases, the formula still turs out to be a good approximation.</p>
+
+<p>Notice in the formula, $SE(\hat{\beta}_1)$ is smaller when the $x_i$ are more spread out; intuitively we have more leverage to estimate a slope when this is the case. We can also see that $SE(\hat{\beta}_0)$ would be the same as $SE(\hat{\mu})$ if $\bar{x}$  were zero (in which case $\hat{\beta}_0$ would be equal to $\bar{y}$).</p>
+
+<p>In gereral, $\sigma^2$ is not known, but can be estimated from the data. This estimation is known as the the <code>residual standard error</code>, and is given by the formula $RSE = \sqrt{RSS/(n-2)}$. Strictly speaking, when $\sigma^2$ is estimated from the data we should write $\widehat{SE}(\hat{\beta}_1)$ to indicate that an estimate has been made, but from simplicity of notation, we will drop the extra &ldquo;hat&rdquo;.</p>
+
+<p>Standard errors can be used to compute <em>confidence intervals</em>. A 95% confidence interval is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter. The range is defined in terms of lower and upper limits computed from the sample of data. For linear regression, the 95% confidence interval for $\beta_1$ approximately takes the form</p>
+
+<div>
+$$
+\hat{\beta}_1 \pm 2 \cdot SE(\hat{\beta}_1)
+$$
+</div>
+
+<p>That is, there is approximately a 95% chance that the interval</p>
+
+<div>
+$$
+\Big[ \hat{\beta}_1 - 2 \cdot SE(\hat{\beta}_1), \hat{\beta}_1 + 2 \cdot SE(\hat{\beta}_1) \Big]
+$$
+</div>
+
+<p>will contain the true value of $\beta_1$. Similaryly, a confidence interval for $\beta_0$ approximately takes the form</p>
+
+<div>
+$$
+\hat{\beta}_0 \pm 2 \cdot SE(\hat{\beta}_0)
+$$
+</div>
+
+<p>Standard errors can also be used to perform <em>hypothesis tests</em> on the coefficients. The most common hypothesis test involves testing the <em>null hypothesis</em> of</p>
+
+<div>
+$$
+H_0: There\ is\ no\ relationship\ between\ X\ and\ Y
+$$
+</div>
+
+<p>versus the <em>alternative hypothesis</em></p>
+
+<div>
+$$
+H_a: There\ is\ some\ relationship\ between\ X\ and\ Y
+$$
+</div>
+
+<p>Mathematically, this corresponds to testing</p>
+
+<div>
+$$
+H_0: \beta_1 = 0
+$$
+</div>
+
+<p>versus</p>
+
+<div>
+$$
+H_a: \beta_1 \neq 0
+$$
+</div>
+
+<p>since if $\beta_1 = 0$ then the model reduces to $Y = \beta_0 + \epsilon$, and $X$ is not associated with $Y$. To test the null hypothesis, we need to determine where $\hat{\beta}_1$, our estimate for $\beta_1$, is sufficiently far from zero that we can be confident that $\beta_1$ is non-zero.</p>
+
+<p>How far is far enough? This of course depends on the accuracy of $\hat{\beta}_1$&ndash;that is, it depends on $SE(\hat{\beta}_1)$. If $SE(\hat{\beta}_1)$ is small, then even relatively small values of $\hat{\beta}_1$ may provide strong evidence that $\beta_1 \neq 0$, and hence that there is a relationship between $X$ and $Y$. In contrast, if $SE(\hat{\beta}_1)$ is large, then $\hat{\beta}_1$ must be large in absolute value in order for us to reject the null hypothesis. In practice, we compute a <code>t-statistic</code>, give by</p>
+
+<div>
+$$
+t = \frac{\hat{\beta}_1 - 0}{SE(\hat{\beta}_1)}
+$$
+</div>
+
+<p>which measures the number of standard deviations that $\hat{\beta}_1$ is away from 0. If there really is no relationship between $X$ and $Y$, then we expect that the <em>t</em> will have a <em>t</em>-distribution with $n-2$ degrees ofgreedom. The <em>t</em>-distribution has a bell shape and for values of $n$ greater than approximately 30 it is quite similar to normal distribution.</p>
+
+<p>Consequently, it is a simple matter to compute the probability of observing any value equal to $|t|$ or larger, assuming $\beta_1 = 0$. We call this probability the <code>p-value</code>. Roughly speaking, we interpret the <em>p-value</em> as follows: <strong>a small p-value indicates that it is unlikely to ovserve such a substantial association between the predictor and the resonse due to chance, in the absence of any real association between the predictor and the resonse</strong>. Hence, if we see a small p-value, then we can infer that there is an association between the predictor and the response. We <em>reject</em> the null hypothesis &ndash; that is, we declare a relationship to exist between $X$ and $Y$ &ndash; if the p-value is small enough. Typical p-value cutoffs for rejecting the null hypothesis are 5 or 1 %. When $n = 30$, these correspond to t-statistics of around 2 and 2.75, respectively.</p>
+
+<h3 id="assessing-the-accuracy-of-the-model">Assessing the accuracy of the model</h3>
+
+<p>Once we have rejected the null hypothesis in favor of the alternative hypothesis, it is natural to want to quantify the <em>extent to which the model fits the data</em>. The quality of linear regression fit is typically assessed using two related quantities: the <code>residual standard error</code> (RSE) and the $R^2$ statistic.</p>
+
+<p><u><em>Residual Standard Error</em></u></p>
+
+<p>Recall from the model that associated with each observation is an error term $\epsilon$. Due to the presence of these error terms, even if we knew the true regression line, we would not be able to perfectly predict $Y$ from $X$. The <code>RSE</code> is an estimate of the standard deviation of $\epsilon$. Roughly speaking, it is the average amount that the response will deviate from the true regression line. It is computed using the formula</p>
+
+<div>
+$$
+RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2}\sum_{i=1}^n(y_i-\hat{y}_i)^2}
+$$
+</div>
+
+<p>Note that <code>RSS</code> was defined as</p>
+
+<div>
+$$
+RSS=\sum_{i=1}^n (y_i - \hat{y}_i)^2
+$$
+</div>
+
+<p>The <em>RSE</em> is considered a measure of the <em>lack of fit</em> of the model to the data. If the predictions obtained using the model are very close to the true outcome values &ndash; that is, if $\hat{y}_i \approx y_i$ for $i=1,2,\ldots,n$&ndash;then RSE will be small, and we can conclude that the model fits the data very well. On the other hand, if $\hat{y}_i$ is very far from $y_i$ for one or more observatins, then the RSE may be quite large, indicating that the model doesn&rsquo;t fit the data well.</p>
+
+<p><u><em>The $\underline{R^2}$ Statistic</em></u></p>
+
+<p>The RSE provides an absolute measure of lack of fit of the model to the data. But since it is measured in the units of $Y$, it is not always clear what constitutes a good RSE.</p>
+
+<p>The $R^2$ statistic provides an alternative measure of fit. It takes the form of a proportion&ndash;the proportion of variance explained&ndash;and so it always takes on a value between 0 and 1, and is independent of the scale of $Y$.</p>
+
+<p>To calculate $R^2$, we use the formula</p>
+
+<div>
+$$
+R^2 = \frac{TSS-RSS}{TSS} = 1 - \frac{RSS}{TSS}
+$$
+</div>
+
+<p>where $TSS=\sum(y_i - \bar{y})^2$ is the total sum of squares, which measures the total variance in the response $Y$ that can be thought of as the amount of variability inherent in the response before the regression is performed. In contrast, <em>RSS</em> measures the amount of variability that is left unexplained after performing the regression. Hence, $TSS-RSS$ measures the amount of variability in the response that is explained (or removed) by performing the regression, and $R^2$ measures the <em>proportion of variability in Y that can be explained using X</em>. An $R^2$ statistic that is close to 1 indicates that a large proportion of the variability in the response has been explained by the regression. A number near 0 indicates that the regression did not explain mch of the variability in the response; this might occur because the linear model is wrong, or the inherent error $sigma^2$ is high, or both.</p>
+
+<p>The $R^2$ statistic has an interpretational advantage over the <em>RSE</em>, since unlike the <em>RSE</em>, it always lies between 0 and 1. However, it can still be challenging to determine what is a <em>good</em> $R^2$, and in general this will depend on the application.</p>
+
+<p>The $R^2$ statistic is a measure of the linear relationship between $X$ and $Y$. Recall that <em>correlation</em>, defined as</p>
+
+<div>
+$$
+Cor(X, Y) = \frac{\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^n(x_i-\bar{x})^2}\sqrt{\sum_{i=1}^n(y_i-\bar{y})^2} }
+$$
+</div>
+
+<p>is also a measure of the linear relationship between $X$ and $Y$. This suggests that we might be able to use $r = Cor(X,Y)$ instead of $R^2$ in order to assess the fit of the linear model. In fact, it can be shown that in the simple linear regression setting, $R^2=r^2$. In other words, the squared correlation and the $R^2$ are identical. However, for the multiple linear regression problem, in which we use several predictors simultaneously to predict the response. The concept of correlation between the predictors and the response does not extend automatically to this setting, since correlation quantifies the association between a single pair of variables rather than between a larger number of variables. We will see that $R^2$ fills this role.</p>
+
+<h2 id="multiple-linear-regression">Multiple Linear Regression</h2>
+
+<p>A simple linear model can be extended to accommodate multiple predictors. We can do this by giving each predictor a separate slope coefficient in a single model. In general, suppose that we have $p$ distanct predictors. Then the multiple linear regression model takes the form</p>
+
+<div>
+$$
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \epsilon
+$$
+</div>
+
+<p>where $X_j$ represents the <em>jth</em> predictor and $\beta_j$ quantifies the association between that variable and the response. We interpret $\beta_j$ as the <em>average</em> effect on $Y$ of a one unit increase in $X_j$, <em>holding all other predictors fixed</em>.</p>
+
+<h3 id="estimating-the-regression-coefficients">Estimating the Regression Coefficients</h3>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://swang8.github.io/tags/islr/">islr</a>&nbsp;
+            
+              <a href="https://swang8.github.io/tags/statistics-learning/">statistics learning</a>&nbsp;
+            
+              <a href="https://swang8.github.io/tags/r/">R</a>&nbsp;
+            
+          </div>
         
 
         
@@ -276,7 +573,7 @@
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;text=&amp;via=shichenTX" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;text=Chapter3&amp;via=shichenTX" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -297,28 +594,28 @@
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;title=Chapter3" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;description=" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fswang8.github.io%2fbooks%2fislr%2fchapter3%2f&amp;description=Chapter3" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -332,16 +629,23 @@
         
           
           
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/books/islr/chapter2/">Chapter2</a></li>
+          
+          </ul>
+          
         
       </article>
 
       
         <ul class="pager blog-pager">
           
-          
-            <li class="next">
-              <a href="https://swang8.github.io/books/islr/intro/" data-toggle="tooltip" data-placement="top" title="Introduction">Next Post &rarr;</a>
+            <li class="previous">
+              <a href="https://swang8.github.io/books/islr/chapter2/" data-toggle="tooltip" data-placement="top" title="Chapter2">&larr; Previous Post</a>
             </li>
+          
           
         </ul>
       

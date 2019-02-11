@@ -70,7 +70,7 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
 Simple Linear Regression Simple linear regression is a straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$.
  $$ Y \approx \beta_{0} &#43; \beta_{1}X $$  In the equation, $\beta_0$ and $\beta_1$ are two unknown constants that represetn the intercept and slope termes in the linear model.",
   "inLanguage" : "en",
-  "wordCount": 4147,
+  "wordCount": 4979,
   "datePublished" : "2019-02-07T14:46:09",
   "dateModified" : "2019-02-07T14:46:09",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -138,7 +138,6 @@ Simple Linear Regression Simple linear regression is a straightforward approach 
         });
     });
 </script>
-
 
 
 
@@ -695,8 +694,109 @@ $$
 <p>Once we have fit the multiple regression model, it is straightforward to apply in order to predict the response $Y$ on the basis of a set of values for the predictors $X_1,X_2,\ldots,X_p$. However, there are three sorts of uncertainty associated with this prediction.</p>
 
 <ol>
-<li>The coefficient estimates $\hat{\beta}_0, \hat{\beta}_1, \ldots,\hat{\beta}_p$ is only an estimate for the <em>true</em> population regression plane. The inacccuracy in the coefficient estimates is related to the <em>reducible error</em>. We can compute a <em>confidence interval</em> in order to determine how close $\hat{Y}$ will be to $f(X)$.</li>
+<li><p>The coefficient estimates $\hat{\beta}_0, \hat{\beta}_1, \ldots,\hat{\beta}_p$ is only an estimate for the <em>true</em> population regression plane. The inacccuracy in the coefficient estimates is related to the <em>reducible error</em>. We can compute a <em>confidence interval</em> in order to determine how close $\hat{Y}$ will be to $f(X)$.</p></li>
+
+<li><p>Of course, in practice assuming a linear modle for $f(X)$ is almost always an approximation of reality, so there is an additional source of potentially reducible error which we call <em>model bias</em>. So when we use a linear model, we are in fact estimating the best linear approximation to the true surface. However, here we will ignore this discrepancy, and operate as if the linear model were correct.</p></li>
+
+<li><p>Even if we know $f(X)$ &ndash; that is, even if we knew the true values for $\beta_0,
+beta_1,\ldots,\beta_p$ &ndash; the response value cannot be predicted perfectly because of the random error $\epsilon$ in the model, which is refered as <em>irreducible error</em>. How much will $Y$ vary from $\hat{Y}$? We use <code>prediction intervals</code> to answer this question. Prediction invervals are always wider than confidence intevals, because they incorporate both the error in the estimate for $f(X)$ and the uncertainty as to how much an individual point will differ from the population regression plane (the irreducible error).</p></li>
 </ol>
+
+<h2 id="other-considerations-in-the-regression-model">Other considerations in the regression Model</h2>
+
+<h3 id="qualitative-predictors">Qualitative Predictors</h3>
+
+<p>In practice, often many predictors are qualitative.</p>
+
+<p><u>Predictors with Only Two Levels</u>
+If a qualitative predictor only has two levels, or possible values, then incorporating it into a regression model is simple. We simply create an indicator or <em>dummy variable</em> that takes on two possible numerical values.</p>
+
+<div>
+$$
+x_i=
+\begin{cases}
+1 &\text{if ith person is female} \\
+0 & \text{if ith person is male}
+\end{cases}
+$$
+</div>
+
+<p><u>Qualitative Predictors with More than Two Levels</u></p>
+
+<p>When a qualitative predictor has more than two levels, a single dummy variable cannot represent all possible values. In this situation, we can create additional dummy variables. Multiple dummy variables can be used.</p>
+
+<h3 id="extentions-of-the-linear-model">Extentions of the Linear Model</h3>
+
+<p>The standard linear regression model provides interpretable results and works quite well on many real-world problems. However, it makes several highly restrictive assumptions that are often violated in practive. Two of the most important assumptions state that the relationship between the predictors and response are <code>additive</code> and <code>linear</code>. The additive assumption means that the effect of changes in a predictor $X_j$ on the response $Y$ is independent of the values of the other predictors. The linear assumption states that the change in the response $Y$ due to a one-unit change in $X_i$ is constant, regardless of the value of $X_j$.</p>
+
+<p>Some common classical approaches for extending the linear model.</p>
+
+<p><u>Removing the Additive Assumption</u></p>
+
+<p>Consider the standard linear regression model with two variables,</p>
+
+<div>
+$$
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon
+$$
+</div>
+
+<p>According to this model, if we increase $X_1$ by one unit, then $Y$ will increase by an average of $\beta_1$ units. Notice that the presence of $X_2$ does not alter this statement &ndash; that is, regardless of the value of $X_2$, a one-unit increase in $X_1$ will lead to a $\beta_1$-unit increase in $Y$.</p>
+
+<p>One way of extending this model to allow for interaction effects is to include a third predictor, called an <code>interaction term</code>, which is constructed by computing the product of $X_1$ and $X_2$. This results in the model</p>
+
+<div>
+$$
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_1 X_2 + \epsilon
+$$
+</div>
+
+<p>How does inclusion of this interaction term relax the additive assumption?</p>
+
+<p>Notice the formula can be written as</p>
+
+<div>
+$$
+\begin{aligned}
+Y &= \beta_0 + (\beta_1 + \beta_3 X_2)X_1 + \beta_2 X_2 + \epsilon \\
+&=\beta_0 + \tilde{\beta}X_1 + \beta_2 X_2 + \epsilon
+\end{aligned}
+$$
+</div>
+
+<p>where $\tilde{\beta} = \beta_1 + \beta_3 X_2$. Since $\tilde{\beta}$ changes with $X_2$, the effect of $X_1$ on $Y$ is no longer constant: adjusting $X_2$ will change the impact of $X_1$ on $Y$.</p>
+
+<p>The <code>hierarchical principle</code>: if we include an interaction in a model, we should also include the main effects, even if the p-values associated with their coefficients are not significant.</p>
+
+<p><u>Non-linear Relationship</u></p>
+
+<p>As discussed previously, the linear regression model assumes a linear relationship between the response and predictors. But in some cases, the true relationship between the response and the predictors may be non-linear. A simple way to directly extend the linear model to accommodate non-linear relationships, using <code>polynomial regression</code>. More complex approaches for performing non-linear fits in more general settings will be introduced later.</p>
+
+<h3 id="potential-problems">Potential Problems</h3>
+
+<p>When we fit a linear regression model to a particular data set, many problems may occur.</p>
+
+<ol>
+<li><p>Non-linearity of the response-predictor relationships</p></li>
+
+<li><p>Correlation of error terms</p></li>
+
+<li><p>Non-constant variance of error terms</p></li>
+
+<li><p>Ourliers</p></li>
+
+<li><p>High-leverage points</p></li>
+
+<li><p>Collinearity</p></li>
+</ol>
+
+<p>In practice, identifying and overcoming these problems is as much an art as a science.</p>
+
+<p><u>1. Non-linearity of the Data</u></p>
+
+<p>The linear regression model assumes that there is a straight-line relationship between the predictors and the response. If the true relationship is far from linear, then virtually all of the conclusions that we draw from the fit are suspect. In addition, the prediction accuracy of the model can be significantly reduced.</p>
+
+<p><code>Residual plots</code> are a useful graphical tool for identifying non-linearity. Given a simple linear regression model, we can plot the residuals, $e_i = y_i - \hat{y}_i$ versus the predictor $x_i$.</p>
 
 
         

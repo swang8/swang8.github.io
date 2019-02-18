@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Thu, 07 Feb 2019 14:46:09 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 09:19:59 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter4 Classification</title>
+      <link>https://swang8.github.io/books/islr/chapter4/</link>
+      <pubDate>Mon, 18 Feb 2019 09:19:59 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/chapter4/</guid>
+      <description>In this chapter, we study approaches for predicting qualitative responses, a process that is known as classification. Predicting a qualitative response for an obervation can be refered to as classifying that observation, since it involves assigning the observation to a category, or class. On the other hand, often the methods used for classification first predict the probability of each of the categories of a qualitative variable, as the basis for making the classification.</description>
+    </item>
     
     <item>
       <title>Chapter3: Linear Regression</title>

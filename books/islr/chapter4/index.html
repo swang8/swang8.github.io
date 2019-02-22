@@ -63,7 +63,7 @@
   "headline": "Chapter4 Classification",
   "description" : "In this chapter, we study approaches for predicting qualitative responses, a process that is known as classification. Predicting a qualitative response for an obervation can be refered to as classifying that observation, since it involves assigning the observation to a category, or class. On the other hand, often the methods used for classification first predict the probability of each of the categories of a qualitative variable, as the basis for making the classification.",
   "inLanguage" : "en",
-  "wordCount": 964,
+  "wordCount": 1055,
   "datePublished" : "2019-02-18T09:19:59",
   "dateModified" : "2019-02-18T09:19:59",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -399,9 +399,17 @@ $$
 
 <h3 id="estimating-the-regression-coefficients">Estimating the Regression Coefficients</h3>
 
-<p>The coefficients $\beta_0$ and $\beta_1$ are unknown, and must be estimated based on the available training data. Althought\ we could use non-linear least squares to fit the model, the more general method of <code>maximum likelihood</code> is preferred, since it has better statistical properties.</p>
+<p>The coefficients $\beta_0$ and $\beta_1$ are unknown, and must be estimated based on the available training data. Although we could use non-linear least squares to fit the model, the more general method of <code>maximum likelihood</code> is preferred, since it has better statistical properties.</p>
 
-<p>The basid intuition behind using maximum likelihood to fit a logistic regression model is a s follows: we seek estimates for $\beta_0$ and $\beta_1$ such that the predicted probability $\hat{p}(x_i)$ of</p>
+<p>The basid intuition behind using maximum likelihood to fit a logistic regression model is a s follows: we seek estimates for $\beta_0$ and $\beta_1$ such that the predicted probability $\hat{p}(x_i)$ of default for each individual corresponds as closely as possible to the individual&rsquo;s observed default status. In other words, we try to find $\hat{\beta}_0$ and $\hat{\beta}_1$ such that plugging these estimates into the model for $p(X)$ yields a number close to one for those who defaulted, and a number close to zero for all who did not. This can be formalized using a mathematical equation called a <code>likelihood funciton</code>:</p>
+
+<div>
+$$
+\ell(\beta_0, \beta_1) = \prod_{i:y_i=1} p(x_i) \prod_{i':y_{i'}} (1 - p(x_{i'}))
+$$
+</div>
+
+<p>The estimate $\hat{\beta}_0$ and $\hat{\beta}_1$ are chosen to <em>maximize</em> this likelihood function.</p>
 
 
         

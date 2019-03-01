@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Mon, 18 Feb 2019 09:19:59 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 16:17:55 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter5 Resampleing Methods</title>
+      <link>https://swang8.github.io/books/islr/chapter5/</link>
+      <pubDate>Fri, 01 Mar 2019 16:17:55 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/chapter5/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Chapter4 Classification</title>

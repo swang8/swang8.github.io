@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>Chapter5 Resampleing Methods</title>
+      <title>Chapter5 Resampling Methods</title>
       <link>https://swang8.github.io/books/islr/chapter5/</link>
       <pubDate>Fri, 01 Mar 2019 16:17:55 -0600</pubDate>
       <author>shichen.wang@gmail.com (S Wang)</author>
       <guid>https://swang8.github.io/books/islr/chapter5/</guid>
-      <description></description>
+      <description>Resampling methods are an indispensable tool in modern statistics. They involve repeatedly drawing samples from a training set and refitting a model of interest on each sample in order to obtain additional information abou the fitted model. For example, in order to estimate the variability of a linear regression fit, we can repeatedly draw different samples from the training data, fit a linear regression to each new sample, and then examine the extent to which the resulting fits differ.</description>
     </item>
     
     <item>

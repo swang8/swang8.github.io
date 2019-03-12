@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>shichen.wang@gmail.com (S Wang)</managingEditor>
     <webMaster>shichen.wang@gmail.com (S Wang)</webMaster>
-    <lastBuildDate>Fri, 01 Mar 2019 16:17:55 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 06 Mar 2019 15:22:04 -0600</lastBuildDate>
     
 	<atom:link href="https://swang8.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter6 Linear Model Selection and Regularization</title>
+      <link>https://swang8.github.io/books/islr/chapter6/</link>
+      <pubDate>Wed, 06 Mar 2019 15:22:04 -0600</pubDate>
+      <author>shichen.wang@gmail.com (S Wang)</author>
+      <guid>https://swang8.github.io/books/islr/chapter6/</guid>
+      <description>In the regression setting, the standard linear model
+ $$ \tag{6.1}Y = \beta_0 + \beta_1 X_1 + \cdots + \beta_p X_p + \epsilon $$  is commonly used to describe the relationship between a response $Y$ and a set of variables $X_1, X_2, \ldots, X_p$. We have seen in Chapter 3 that one typiclaly fits this model using least square.
+In the chapters that follow, we consider some approaches for extending the linear model framework.</description>
+    </item>
     
     <item>
       <title>Chapter5 Resampling Methods</title>

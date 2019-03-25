@@ -70,7 +70,7 @@ In the chapters that follow, we consider some approaches for extending the linea
  $$ \tag{6.1}Y = \beta_0 &#43; \beta_1 X_1 &#43; \cdots &#43; \beta_p X_p &#43; \epsilon $$  is commonly used to describe the relationship between a response $Y$ and a set of variables $X_1, X_2, \ldots, X_p$. We have seen in Chapter 3 that one typiclaly fits this model using least square.
 In the chapters that follow, we consider some approaches for extending the linear model framework.",
   "inLanguage" : "en",
-  "wordCount": 4634,
+  "wordCount": 6342,
   "datePublished" : "2019-03-06T15:22:04",
   "dateModified" : "2019-03-06T15:22:04",
   "image" : "https://swang8.github.io/images/mollusc01.png",
@@ -677,6 +677,144 @@ $$
 <p><img src="/images/islr_F6.10.png" /></p>
 
 <h4 id="bayesian-interpretation-for-ridge-regression-and-the-lasso">Bayesian interpretation for Ridge Regression and the Lasso</h4>
+
+<p>We now show that one can view ridge regression and the lasso through a Bayesian lens. A Bayesian viewpoint for regression assumes that the coefficient vector $\beta$ has some <code>prior</code> distribution, say $p(\beta)$, where $\beta = (\beta_0, \beta_1,\ldots,\beta_p)^T$. The likelihood of the data can be written as $f(Y|X,\beta)$, where $X=(X1,\ldots,X_p)$. Multiplying the prior distribution by the likelihood gives us the <code>posterior</code> distribution, which takes the form</p>
+
+<div>
+$$
+p(\beta|X,Y) \propto f(Y|X,\beta)p(\beta|X) = f(Y|X,\beta)p(\beta)
+$$
+</div>
+
+<p>where the proportionality above follows from Bayes&rsquo; theorem, and the equality above follows from the assumption that $X$ is fixed.</p>
+
+<p>We assume the usual linear model,</p>
+
+<div>
+$$
+Y = \beta_0 + X_1 \beta_1 + \ldots + X_p \beta_p + \epsilon
+$$
+</div>
+
+<p>and suppose that the errors are independent and drawn from a normal distribution. Furthermore, assume that $p(\beta) = \prod_{j=1}^p g(\beta_j)$, for some density function $g$. It turns out that the ridge regression and lasso follow naturally from two special cases of $g$:</p>
+
+<ul>
+<li><p>If $g$ is a Gaussian distribution with mean zero and standard deviation a function of $\lambda$, then it follows that the <code>posterior mode</code> for $\beta$ &ndash; that is, the most likely value for $\beta$, given the data &ndash; is given by the ridge regressioin solution. In fact, the ridge regression solution is also the posterior mean.</p></li>
+
+<li><p>If $g$ is a double-exponential (Laplace) distribution with mean zero and scale parameter a function of $\lambda$, then it follows that the posterior mode for $\beta$ is the lasso solution. However, the lasso solution is not <em>the</em> posterior mean, and in fact, the posterior mean does not yield a sparse coefficient vector.</p></li>
+</ul>
+
+<p><img src="/images/islr_F6.11.png" /></p>
+
+<p>The Gaussian and double-exponential priors are displayed in Figure 6.11. Therefore, from a Bayesian viewpoint, ridge regression and the lasso follow directly from assuming the usual linear model with normal errors, together with a simple prior distribution for $\beta$. Notice that the lasso prior is steeply peaked at zero, while the Gaussian is flatter and fatter at zero. Hence, the lasso expects a priori that many of the coefficients are exactly zero, while ridge assumes the coefficients are randomly distributed about zero.</p>
+
+<h3 id="selecting-the-tuning-parameter">Selecting the Tuning Parameter</h3>
+
+<p>Implementing ridge regression and the lasso requires a method for selecting a value for the tuning parameter $\lambda$ in (6.5) and (6.7), or equivalently, the value of the constraint $s$ in (6.9) and (6.8). Cross-validation provides a simple way to tackle this problem. We choose a grid of $\lambda$ values, and compute the corss-validation error for each value of $\lambda$. We then select the tuning parameter value for which the cross-validation error is smallest. Finally, the model is re-fit using all of the available observations and the selected value of the tuning parameter.</p>
+
+<p><img src="/images/islr_F6.12.png" /></p>
+
+<p>Figure 6.12 displays the choice of $\lambda$ that results from performing leave-out-out cross-validation on the ridge regression fits from the <em>Credit</em> data set.</p>
+
+<h2 id="dimension-reduction-methods">Dimension Reduction Methods</h2>
+
+<p>The methods that we have discussed so far have controlled variance in two differenct ways, either by using a subset of the original variables, or by shrinking their coefficients toward zero. All of these methods are defined using the original predictors, $X_1, X_2, \ldots, X_p$. We now explore a class of approaches that <code>transform</code> the predictors and then fit a least squares model using the transformed variables. We will refer to these techniques as <code>dimension reduction</code> methods.</p>
+
+<p>Let $Z_1,Z_2,\ldots,Z_M$ represent $M &lt; p$ linear combinations for our original $p$ predictors. That is,</p>
+
+<div>
+$$
+\tag{6.16}Z_m = \sum_{j=1}^p \phi_{jm} X_j
+$$
+</div>
+
+<p>for some constants $\phi_{1m},\ldots,\phi_pm$, $m=1,\ldots,M$. We can then fit the linear regression model</p>
+
+<div>
+$$
+\tag{6.17}y_i = \theta_0 + \sum_{m=1}^M \theta_m z_{im} + \epsilon_i,\quad i = 1,\ldots,n,
+$$
+</div>
+
+<p>using least squares. Note that in (6.17), the regression coefficients are given by $\theta_0,\theta_1,\ldots,\theta_M$. If the constant $\phi$ are chosen wisely, then such dimention reduction approaches can often outperform least squares regression.</p>
+
+<p>The term <code>dimension reduction</code> comes from the fact that this approach reduces the problem of estimating the $p+1$ coefficients to the simpler problem of estimating the $M+1$ coefficients, where $M &lt; p$.</p>
+
+<p>Notice that from (6.16),</p>
+
+<div>
+$$
+\sum_{m=1}^M\theta_m z_{im} = \sum_{m=1}^M \theta_m \sum_{j=1}^p \phi_{jm} x_{ij} = \sum_{j=1}^p \sum_{m=1}^M \theta_m \phi_{jm} x_{ij} = \sum_{j=1}^p \beta_j x_{ij},
+$$
+</div>
+
+<p>where</p>
+
+<div>
+$$
+\tag{6.18}\beta_j = \sum_{m=1}^M \theta_m \phi_{jm}
+$$
+</div>
+
+<p>Hence (6.17) can be thought of as a special case of the original linear regression model given by (6.1). Dimension reduction serves to constrain the estimated $\beta_j$ coefficients, since now they must take the form (6.18). This constraint on the form of the coefficients has the potential to bias the coefficient estimates. However, in situations where $p$ is large relative to $n$, selecting a value of $M \ll p$ can significantly reduce the variance of the fitted coefficients. If $M = p$, and all the $Z_m$ are linear independent, then (6.18) poses no constraints. In this case, no dimension reduction occurs, and so fitting (6.17) is equivalent to performing least squares on the original $p$ predictors.</p>
+
+<p>All dimension reduction methods work in two steps. First, the transformed predictors $Z_1,Z_2,\ldots,Z_M$ are obtained. Second, the model is fit using these $M$ predictors. However, the choice of $Z$ or equivalently, the selection of the $\phi$s, can be achieved in different ways. In this chapter, we will consider two approaches for this task: <code>principal components</code> and <code>partial least squares</code>.</p>
+
+<h2 id="principal-components-regression">Principal Components Regression</h2>
+
+<p><code>Principal Components Regression</code> (PCA) is a popular approach for deriving a low dimensional set of features from a large set of variables.</p>
+
+<p><img src="/images/islr_F6.14.png" /></p>
+
+<p>PCA is a technique for reducing the dimension of a $n \times p$ data matrix $X$. the first principal component direction of the data is that along which the observation vary the most. For instance, consider Figure 6.14, which shows population size in tens of thousands of people, and ad spending for a particular company for 100 cities. The green solid line represents the first principal component direction of the data. We can see by eye that this is the direction along which tere is the greatest variability in the data. That is, if we project the 100 observations onto this line, then the resulting proejcted observations would have the largest possible variance.</p>
+
+<p>The first principal component is displayed graphically in Figure 6.14, but how can it be summarized mathematically? It is given by the formula</p>
+
+<div>
+$$
+\tag{6.19} Z_1 = 0.839 \times (\text{pop} - \overline{\text{pop}}) + 0.544 \times (\text{ad} - \overline{\text{ad}})
+$$
+</div> 
+
+<p>Here $\phi_{11} = 0.839$ and $\phi_21 = 0.544$</p>
+
+<p>are the principal component loadings, which define the direction refered to above. In (6.19), $\overline{\text{pop}}$ indicates the mean of all pop values in this data set, and $\overline{\text{ad}}$ indicates the mean of all ad spending. The idea is that out of every possible linear combinatioin of pop and ad such that</p>
+
+<div>
+$$
+\phi_{11}^2 + \phi_{21}^2 = 1
+$$
+</div>
+
+<p>this particular linear combination yields the highest variance.</p>
+
+<p>Since $n = 100$, pop and ad are vectors of length 100, and so is $Z_1$. For instance,</p>
+
+<div>
+$$
+\tag{6.20}z_{i1} = 0.839 \times (\text{pop}_i - \overline{\text{pop}}) + 0.544 \times (\text{ad}_i - \overline{\text{ad}})
+$$
+</div>
+
+<p>The values of $z$ are known as the <em>principal component score</em>, and can be seen in the right-hand panel of Figure 6.15.</p>
+
+<p><img src="/images/islr_F6.15.png" /></p>
+
+<p>There is also another interpretation for PCA: the first principal component vector defines the line that is as close as possible to the data. For instance, in Figure 6.14, the first principal component line minimizes the sum of the squared perpendicular distances between each point and the line. These distances are plotted as dashed line segments in the left-had panle of Figure 6.15, in which the crosses represent the projection of each point onto the first principal component line. The first principal component has been chosen so that the projected observations are as close as possible to the original observations.</p>
+
+<p>In the right panel of Figure 6.15, the left panel has been rotated so that the first principal component direction coincides with the x-axis. It is possible to show that the first principal component score for the $i$th observation, given in (6.20), is the distance in the x-direction of hte $i$th cross from zero.</p>
+
+<p>We can think of the values of the principal component $Z_1$ as single-number summaries of the join pop and ad for each location. How well can a single number represent both pop and ad? In this case, Figure 6.14 indicates that pop and ad have approximately a linear relationship, and so we might expect that a single-number summary will work well. The first principal component appears to capture most of the information contained in the pop and ad predcitors.</p>
+
+<p>So far we have concentrated on the first principal component. In general, one can construct up to $p$ distinct principal components. The second principal component $Z_2$ is a linear combination of hte variables that is un-correlated with $Z_1$, and has largest variance subject to this constraint. The second principal component direction is illustrated as a dashed blue line in Figure 6.14. It turns out that the zero correlation condition of $Z_1$ with $Z_2$ is equivalent to the condition that the direction muset be perpendicular, or orthogonal, to the first principal component direction.</p>
+
+<p>With two-dimensional data, we can construct at most two principal components. However, if we had other predictors, then additional components could be constructed. They would successively maximize variance, subject to the constraint of being uncorrelated with the preceding components.</p>
+
+<p><u>The Principal Components Regression Approach</u></p>
+
+<p>The <code>principal components regression</code> (PCR) approach involves constructing the first M principal components, $Z_1,\ldots,Z_M$, and then using these components as the predictors in a linear regression model that is fit using least squares. The kye idea is that often a small number of principal components suffice to explain most of the variability in the data, as well as the relationship with the response. In other words, we assume that the directions in which $X_1,\ldots,\X_p$ show the most variation are the directions that are associated with $Y$. While this assumption is not guranteed to be true, it often turns out to be a reasonable enough approximation to give good results.</p>
+
+<p>If the assumption underlying PCR holds, then fitting a least squares model to $Z_1,\ldots,Z_M$ will lead to better results than fitting a least squares model to $X_1,\ldots,X_p$, since most or all of the information in the data that related to the response is contained in $Z_1,\ldots,Z_M$, and by estimating only $M \ll p$ coefficients we can mitigate overfitting.</p>
 
 
         
